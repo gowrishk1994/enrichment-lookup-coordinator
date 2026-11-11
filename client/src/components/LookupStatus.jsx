@@ -36,7 +36,6 @@ export default function LookupStatus({ lookup, onRun, running }) {
     {lookup.status === 'completed' && <div className="result-box">
       <span className="muted-label">PROVIDER REPUTATION</span>
       <strong className={`verdict ${lookup.reputation}`}>{lookup.reputation}</strong>
-      <p>The provider mock returned this reputation verdict.</p>
     </div>}
     <div className="request-id">Request ID <code>{lookup.id}</code></div>
   </section>;
