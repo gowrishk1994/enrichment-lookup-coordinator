@@ -4,6 +4,12 @@ services:
     environment:
       NODE_ENV: production
       PORT: 4000
+      DATABASE_URL: "${DATABASE_URL:-}"
+      DATABASE_PATH: /app/data/enrichment.sqlite
+      DATABASE_SSL: "${DATABASE_SSL:-false}"
+      DATABASE_SSL_REJECT_UNAUTHORIZED: "${DATABASE_SSL_REJECT_UNAUTHORIZED:-true}"
+      LEASE_DURATION_MINUTES: 5
+      EXPIRY_CHECK_INTERVAL_MS: 1000
     volumes:
       - server_data:/app/data
 
